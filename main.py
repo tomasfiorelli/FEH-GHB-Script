@@ -20,9 +20,8 @@ def get_coordinates(image, screen):
 
 def click(button_coordinates):
     auto.moveTo(button_coordinates[0], button_coordinates[1])
-    sleep(1)
+    sleep(0.5)
     auto.leftClick(button_coordinates[0], button_coordinates[1])
-
 
 # MAIN LOOP
 
@@ -36,7 +35,7 @@ while(True):
         print(df, '\n')
         if flag:
             exit()
-        sleep(2.5)
+        sleep(2)
 
     print(f'Searching image [STEP: {images[current_step]}]', end=' ')
     coordinates = get_coordinates(f'images\\{images[current_step]}.png', right_screen)
